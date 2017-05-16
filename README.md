@@ -43,6 +43,7 @@ IntelliJ IDEA  +  MySQL
 
 ### 项目功能截图
 #### 欢迎页：
+![Alt text](http://znote.wang/wp-content/uploads/2017/05/QQ20170515-162626@2x.png)
 <img src="http://znote.wang/wp-content/uploads/2017/05/QQ20170515-162626@2x.png" width="50%" height="50%"/>
 #### 主页面：
 <img src="http://znote.wang/wp-content/uploads/2017/05/QQ20170515-162342@2x.png" width="50%" height="50%"/>
