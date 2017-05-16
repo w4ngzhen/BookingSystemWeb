@@ -1,6 +1,6 @@
 ## 基于JavaWeb的餐厅预订系统
 
-本人博客：[znote.wang](znote.wang)，欢迎大家访问！
+本人博客：[znote.wang](http://znote.wang)，欢迎大家访问！
 
 ## 项目介绍
 本餐厅预订系统，是本人的在校自学java servlet相关所做的一个实践。
