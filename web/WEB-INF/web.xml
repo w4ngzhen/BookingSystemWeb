@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>indexServlet</servlet-name>
+        <servlet-class>servlet.IndexServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>indexServlet</servlet-name>
+        <url-pattern>/bookingsystem</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AddBookingServlet</servlet-name>
+        <servlet-class>servlet.AddBookingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddBookingServlet</servlet-name>
+        <url-pattern>/addbooking</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SubmitServlet</servlet-name>
+        <servlet-class>servlet.SubmitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubmitServlet</servlet-name>
+        <url-pattern>/submit</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>TransferServlet</servlet-name>
+        <servlet-class>servlet.TransferServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TransferServlet</servlet-name>
+        <url-pattern>/transfer</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TransferCompleteServlet</servlet-name>
+        <servlet-class>servlet.TransferCompleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TransferCompleteServlet</servlet-name>
+        <url-pattern>/transfercomplete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <servlet-class>servlet.CheckoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/checkout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetRepastServlet</servlet-name>
+        <servlet-class>servlet.SetRepastServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetRepastServlet</servlet-name>
+        <url-pattern>/record</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CancelServlet</servlet-name>
+        <servlet-class>servlet.CancelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CancelServlet</servlet-name>
+        <url-pattern>/cancel</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddTableResultServlet</servlet-name>
+        <servlet-class>servlet.AddTableResultServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddTableResultServlet</servlet-name>
+        <url-pattern>/addtable_result</url-pattern>
+    </servlet-mapping>
+</web-app>

@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+
+.main {
+    width: 600px;
+    height: 300px;
+    border: solid black;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    width: inherit;
+    height: 100px;
+    margin: auto;
+}
+
+.press {
+    width: 100%;
+    display: block;
+    line-height: 1.5em;
+    overflow: visible;
+    font-size: 30px;
+    text-shadow: #f3f3f3 1px 1px 0px, #b2b2b2 1px 2px 0
+}
+
+.buttonDiv {
+    width: inherit;
+    height: 150px;
+    margin: auto;
+}
+
