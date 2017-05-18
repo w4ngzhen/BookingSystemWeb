@@ -6,7 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f34c08cf-2e8b-47f0-9a1f-808995741ab7" name="Default" comment="" />
+    <list default="true" id="f34c08cf-2e8b-47f0-9a1f-808995741ab7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/getFreeTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war/BookingSystemWeb_war.war" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war/BookingSystemWeb_war.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/classes/config/database_config.properties" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/classes/config/database_config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/bookingsystem.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/bookingsystem.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/database_config.properties" afterPath="$PROJECT_DIR$/src/config/database_config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/config/database_config.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/database_config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bookingsystem.jsp" afterPath="$PROJECT_DIR$/web/bookingsystem.jsp" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,101 +36,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="database_config.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config/database_config.properties">
+      <file leaf-file-name="bookingsystem.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/bookingsystem.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myjs.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/js/myjs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CancelServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/CancelServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckoutServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/CheckoutServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/IndexServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="36" column="60" lean-forward="true" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SetRepastServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/SetRepastServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubmitServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/SubmitServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransferCompleteServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/TransferCompleteServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransferServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/TransferServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/DatabaseConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-127">
-              <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+            <state relative-caret-position="-649">
+              <caret line="123" column="39" lean-forward="false" selection-start-line="123" selection-start-column="39" selection-end-line="123" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -151,8 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/NoFreeTable.jsp" />
-        <option value="$PROJECT_DIR$/web/AddBooking.jsp" />
         <option value="$PROJECT_DIR$/web/BookingSystem.jsp" />
         <option value="$PROJECT_DIR$/src/myutil/StringTool.java" />
         <option value="$PROJECT_DIR$/web/add_success.jsp" />
@@ -199,9 +116,11 @@
         <option value="$PROJECT_DIR$/web/css/title.css" />
         <option value="$PROJECT_DIR$/web/css/center.css" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/bookingsystem.jsp" />
-        <option value="$PROJECT_DIR$/src/config/database_config.properties" />
         <option value="$PROJECT_DIR$/src/servlet/AddTableResultServlet.java" />
+        <option value="$PROJECT_DIR$/src/config/database_config.properties" />
+        <option value="$PROJECT_DIR$/web/1.txt" />
+        <option value="$PROJECT_DIR$/web/bookingsystem.jsp" />
+        <option value="$PROJECT_DIR$/web/getFreeTable.php" />
       </list>
     </option>
   </component>
@@ -221,6 +140,7 @@
   <component name="MavenProjectNavigator">
     <treeState />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="width" value="1280" />
     <option name="height" value="800" />
@@ -262,8 +182,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -462,7 +381,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1013,6 +933,9 @@
       <workItem from="1494831998411" duration="260000" />
       <workItem from="1494833726471" duration="945000" />
       <workItem from="1494892344459" duration="767000" />
+      <workItem from="1494940806379" duration="5395000" />
+      <workItem from="1495069352876" duration="967000" />
+      <workItem from="1495070426461" duration="225000" />
     </task>
     <task id="LOCAL-00001" summary="booking system">
       <created>1494893185900</created>
@@ -1032,10 +955,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113782000" />
+    <option name="totallyTimeSpent" value="120369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1051,7 +975,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1059,7 +982,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25852272" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2786753" sideWeight="0.46168584" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29159936" sideWeight="0.46168584" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2584814" sideWeight="0.53831416" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1067,6 +990,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1083,7 +1007,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1092,20 +1016,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/lang/ref/ReferenceQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/sql/DriverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3225">
-          <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/add_failed.jsp" />
     <entry file="file://$PROJECT_DIR$/web/css/button.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -1231,17 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3">
           <caret line="183" column="37" lean-forward="false" selection-start-line="183" selection-start-column="37" selection-end-line="183" selection-end-column="37" />
-          <folding>
-            <marker date="1494740574000" expanded="true" signature="523:560" ph="SELECT * FRO... bsbooking" />
-            <marker date="1494740574000" expanded="true" signature="1923:2124" ph="SELECT tno, bstable" />
-            <marker date="1494740574000" expanded="true" signature="2057:2123" ph="SELECT tno F... bsbooking" />
-            <marker date="1494740574000" expanded="true" signature="3258:3436" ph="SELECT tno, bstable" />
-            <marker date="1494740574000" expanded="true" signature="3379:3435" ph="SELECT tno F... bsbooking" />
-            <marker date="1494740574000" expanded="true" signature="3507:3717" ph="SELECT tno, bstable" />
-            <marker date="1494740574000" expanded="true" signature="3632:3716" ph="SELECT tno F... bsbooking" />
-            <marker date="1494740574000" expanded="true" signature="4711:4761" ph="SELECT * FRO... bsbooking" />
-            <marker date="1494740574000" expanded="true" signature="6101:6122" ph="SELECT * FRO... bstable" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,18 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2847">
           <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-          <folding>
-            <marker date="1494762718000" expanded="true" signature="318:365" ph="DELETE FROM " />
-            <marker date="1494762718000" expanded="true" signature="1116:1151" ph="DELETE FROM " />
-            <marker date="1494762718000" expanded="true" signature="1922:2010" ph="UPDATE bsboo... " />
-            <marker date="1494762718000" expanded="true" signature="2791:2857" ph="SELECT * FRO... bsbooking" />
-            <marker date="1494762718000" expanded="true" signature="2797:2857" ph="UPDATE bsboo... " />
-            <marker date="1494762718000" expanded="true" signature="3856:3889" ph="DELETE FROM " />
-            <marker date="1494762718000" expanded="true" signature="3856:3891" ph="DELETE FROM " />
-            <marker date="1494762718000" expanded="true" signature="4301:4429" ph="INSERT INTO bookingrecord... " />
-            <marker date="1494762718000" expanded="true" signature="5735:5777" ph="UPDATE bsboo... " />
-            <marker date="1494762718000" expanded="true" signature="6457:6642" ph="INSERT INTO bsbooking... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1284,7 +1171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,7 +1186,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="29" column="83" lean-forward="false" selection-start-line="29" selection-start-column="83" selection-end-line="29" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1308,7 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="47" column="59" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1316,7 +1200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,15 +1223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/add_booking.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="60" lean-forward="true" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1359,19 +1233,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bookingsystem.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="431" column="16" lean-forward="false" selection-start-line="431" selection-start-column="16" selection-end-line="431" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/AddBookingServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="24" column="104" lean-forward="false" selection-start-line="24" selection-start-column="104" selection-end-line="24" selection-end-column="104" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1379,7 +1244,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="18" column="68" lean-forward="false" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/myjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1401,8 +1272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/IndexServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="36" column="60" lean-forward="true" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+        <state relative-caret-position="345">
+          <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -1418,7 +1289,7 @@
     <entry file="file://$PROJECT_DIR$/src/servlet/SubmitServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1434,15 +1305,30 @@
     <entry file="file://$PROJECT_DIR$/src/servlet/TransferServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/DatabaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+        <state relative-caret-position="55">
+          <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11295">
+          <caret line="753" column="0" lean-forward="false" selection-start-line="753" selection-start-column="0" selection-end-line="753" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/add_booking.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1450,15 +1336,22 @@
     <entry file="file://$PROJECT_DIR$/src/config/database_config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/getFreeTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/myjs.js">
+    <entry file="file://$PROJECT_DIR$/web/bookingsystem.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="-649">
+          <caret line="123" column="39" lean-forward="false" selection-start-line="123" selection-start-column="39" selection-end-line="123" selection-end-column="39" />
           <folding />
         </state>
       </provider>

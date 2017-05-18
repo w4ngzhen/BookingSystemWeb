@@ -28,6 +28,7 @@
     <script type="text/javascript" src="js/bookingsystem.js"></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script>
+
         function itsTimeToEat() {
             var hour = new Date().getHours();
             if (hour < 10) {
@@ -95,7 +96,35 @@
             $("#cancelAddTheTable").click(function () {
                 $("#theAddBox").slideUp("slow");
             });
+            var tds = $("#allTables td");
+            tds.click(function () {
+                var tdSeq = $(this).parent().find("td").index($(this)[0]);
+                var trSeq = $(this).parent().parent().find("tr").index($(this).parent()[0]);
+                var text = document.getElementById("allTables")
+                    .getElementsByTagName("tr")[trSeq]
+                    .getElementsByTagName("td")[tdSeq].innerHTML;
+                alert(text);
+                console.log(text);
+            });
         });
+        function loadXMLDoc() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("add_detail").innerHTML = xmlhttp.responseText;
+                }
+                xmlhttp.open("POST", "/1.txt", true);
+                xmlhttp.send();
+            }
+        }
     </script>
     <style>
         body {
@@ -204,8 +233,8 @@
 
         table.notetables {
             float: left;
-            width: 200px;
-            height: 100px;
+            width: 300px;
+            height: 50px;
         }
 
         table.notetables td {
@@ -347,7 +376,7 @@
                 </td>
             </tr>
         </table>
-        <div>
+        <div id="ButtonDiv2">
             <table style="width: 600px; text-align: center">
                 <tr>
                     <td style="text-align: center">
@@ -371,6 +400,10 @@
                 </table>
                 <input class="button2 blue" type="submit" value="新增预约">
             </form>
+            <input type="button" onclick="loadXMLDoc()">
+        </div>
+        <div id="add_detail">
+
         </div>
         <div id="add_without_booking_panel" class="setCenter red setWidth" style="display: none">
             <form id="submitForm" method="post" action="/submit" onsubmit="return submitMyInfo()">
@@ -411,27 +444,12 @@
     <div class="tableArea">
         <table class="notetables">
             <tr>
-                <td style="background-color: #AB7127; width: 60px"></td>
-                <td>可用空闲</td>
-            </tr>
-            <tr>
-                <td style="background-color: #EBD515; width: 60px"></td>
-                <td>已有预定</td>
-            </tr>
-            <tr>
-                <td style="background-color: #EB1524; width: 60px"></td>
-                <td>正在就餐</td>
-            </tr>
-        </table>
-        <table class="buttonArea">
-            <tr>
-                <td>
-                    <input id="addTheTable" class="button2 green" type="button" value="添加桌子">
+                <td style="text-align: center">
+                    <input style="margin: auto" id="addTheTable" class="button2 green" type="button" value="添加桌子">
                 </td>
-            </tr>
-            <tr>
-                <td>
-                    <input id="deleteTheTable" class="button2 red" type="button" value="移除桌子">
+                <td></td>
+                <td style="text-align: center">
+                    <input style="margin: auto" r id="deleteTheTable" class="button2 red" type="button" value="移除桌子">
                 </td>
             </tr>
         </table>
@@ -448,15 +466,26 @@
                     for (int j = 0; j < col; j++) {
                         if (i * col + j < size) {
                             Table table = allTables.get(i * col + j);
-                            String status = null;
+                            String status;
+                            String sta;
+                            String fontColor;
                             if (TableCheck.hasTheTableInTables(onGoingTables, table.getTno())) {
                                 status = "ing";
+                                sta = "正就餐";
+                                fontColor = "#EB1524";
                             } else if (TableCheck.hasTheTableInBookings(preBookings, table.getTno())) {
                                 status = "pre";
+                                sta = "有预定";
+                                fontColor = "#EBD515";
                             } else {
                                 status = "free";
+                                sta = "空闲";
+                                fontColor = "#AB7127";
                             }
-                            out.print("<td valign='bottom' class='" + status + "'>" + table.getTno() + "号桌<br/>(" + table.getPlaces() + "人左右)" + "</td>");
+                            out.print("<td valign='bottom' class='" + status + "'>"
+                                    + "<strong>&nbsp&nbsp-" + table.getTno() + "号桌-</strong><br/>"
+                                    + "<font color='" + fontColor + "'>&nbsp&nbsp&nbsp[" + sta + "]</font><br/>"
+                                    + "&nbsp&nbsp&nbsp(" + table.getPlaces() + "人左右)" + "</td>");
                         }
                     }
                     out.print("</tr>");
@@ -475,9 +504,11 @@
                             if (!TableCheck.hasTheTableInTables(onGoingTables, tno)
                                     && !TableCheck.hasTheTableInBookings(preBookings, tno)) {
                                 if (i == 0) {
-                                    out.print("<option  selected='selected' value ='" + tno + "'>" + tno + "（" + places + "人左右）" + "</option>");
+                                    out.print("<option  selected='selected' value ='" + tno + "'>"
+                                            + tno + "（" + places + "人左右）" + "</option>");
                                 } else {
-                                    out.print("<option  value ='" + tno + "'>" + tno + "（" + places + "人左右）" + "</option>");
+                                    out.print("<option  value ='" + tno + "'>"
+                                            + tno + "（" + places + "人左右）" + "</option>");
                                 }
                             }
                         }
