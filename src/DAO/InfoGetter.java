@@ -16,6 +16,44 @@ import java.util.List;
  * Created by mee on 2017/4/24.
  */
 public class InfoGetter {
+
+    public static List<Booking> getRelatedBookings(int tno) {
+        List<Booking> temp = new ArrayList<Booking>();
+        DatabaseConnection dbc = new DatabaseConnection();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String sql = "SELECT * FROM bsbooking WHERE tno = ?";
+        try {
+            ps = dbc.getConnection().prepareStatement(sql);
+            ps.setInt(1, tno);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Booking booking = new Booking();
+                booking.setBid(rs.getInt("bid"));
+                booking.setStartTime(rs.getTimestamp("startTime"));
+                booking.setEndTime(rs.getTimestamp("endTime"));
+                booking.setTno(rs.getInt("tno"));
+                booking.setcName(rs.getString("cName"));
+                booking.setcPhoneNumber(rs.getString("cPhoneNumber"));
+                booking.setStatus(rs.getString("status"));
+                temp.add(booking);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (ps != null)
+                    ps.close();
+                if (rs != null)
+                    rs.close();
+                dbc.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return temp;
+    }
+
     public static Booking getBookingByBid(int bid) {
         DatabaseConnection dbc = new DatabaseConnection();
         PreparedStatement ps = null;

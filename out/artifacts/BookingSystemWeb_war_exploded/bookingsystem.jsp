@@ -25,9 +25,83 @@
     <link rel="stylesheet" type="text/css" href="./css/button.css">
     <link rel="stylesheet" type="text/css" href="css/title.css">
     <link rel="stylesheet" type="text/css" href="css/center.css">
-    <script type="text/javascript" src="js/bookingsystem.js"></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script>
+        var startTimeSetting = 18;
+        var endTimeSelectSetting = 23;
+        function timeConfirm(timeLocal) {
+            var currentDate = new Date();
+            var cY = currentDate.getFullYear();
+            var cM = currentDate.getMonth() + 1;
+            var cD = currentDate.getDate();
+            var x = timeLocal.value;
+            var year = x.substring(0, 4);
+            var month = x.substring(5, 7);
+            var day = x.substring(8, 10);
+            var hour = x.substring(11, 13);
+            var minute = x.substring(14);
+            var time2 = document.getElementsByName("endTimeSelect")[0];
+            if (year == "" || month == "" || day == "" || hour == "" || minute == "") {
+                alert("请选择一个完整时间");
+                time2.disabled = true;
+                timeLocal.value = "";
+            } else if (parseInt(hour) < startTimeSetting || parseInt(hour) >= endTimeSelectSetting) {
+                alert("请选择" + startTimeSetting + ":00到" + endTimeSelectSetting + ":00的时间");
+                time2.disabled = true;
+                timeLocal.value = "";
+            } else if (year != cY || month != cM || day != cD) {
+                alert("请选择今日时间:" + cY + "-" + cM + "-" + cD);
+                time2.disabled = true;
+            } else {
+                time2.disabled = false;
+            }
+        }
+        function timeConfirm2(timeLocal2) {
+            timeConfirm(timeLocal2);
+            var st = document.getElementsByName("startTimeSelect")[0].value;
+            var et = timeLocal2.value;
+            if (et <= st) {
+                alert("请选择晚于开始时间的正确时间");
+                timeLocal2.value = "";
+            }
+        }
+        function inputComplete() {
+            var st = document.getElementsByName("startTimeSelect")[0].value;
+            var et = document.getElementsByName("endTimeSelect")[0].value;
+            if (st == "" || et == "") {
+                alert("请选择时间");
+                return false;
+            } else {
+                return true;
+            }
+        }
+        function listClick() {
+            var selects = document.getElementsByName("select");
+            for (var i = 0; i < selects.length; i++) {
+                if (selects[i].checked) {
+                    var selectValue = selects[i].value;
+                    var transferButton = document.getElementsByName("transfer")[0];
+                    var recordButton = document.getElementsByName("record")[0];
+                    var checkoutButton = document.getElementsByName("checkout")[0];
+                    var cancelButton = document.getElementsByName("cancel")[0];
+                    if (selectValue.match("preBooking_*")) {
+                        transferButton.disabled = false;
+                        recordButton.disabled = false;
+                        checkoutButton.disabled = true;
+                        cancelButton.disabled = false;
+                        document.getElementsByName("transfertable")[0].value = selectValue;
+                        document.getElementsByName("setRepastBooking")[0].value = selectValue;
+                        document.getElementsByName("cancelbookingid")[0].value = selectValue;
+                    } else if (selectValue.match("onGoingTable_*")) {
+                        transferButton.disabled = true;
+                        recordButton.disabled = true;
+                        checkoutButton.disabled = false;
+                        cancelButton.disabled = true;
+                        document.getElementsByName("checkouttable")[0].value = selectValue;
+                    }
+                }
+            }
+        }
 
         function itsTimeToEat() {
             var hour = new Date().getHours();
@@ -103,8 +177,9 @@
                 var text = document.getElementById("allTables")
                     .getElementsByTagName("tr")[trSeq]
                     .getElementsByTagName("td")[tdSeq].innerHTML;
-                alert(text);
-                console.log(text);
+                var tableDetailForm = document.getElementById("table_detail_form");
+                tableDetailForm.getElementsByTagName("input")[0].value = text;
+                document.getElementById("table_detail_form").submit();
             });
         });
     </script>
@@ -529,6 +604,9 @@
                 </table>
             </form>
         </div>
+        <form id="table_detail_form" method="post" action="/tabledetail" target="_blank" hidden>
+            <input hidden type="text" value="" name="info">
+        </form>
     </div>
 </div>
 </body>

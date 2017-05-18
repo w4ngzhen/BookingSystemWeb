@@ -82,4 +82,12 @@
         <servlet-name>AddTableResultServlet</servlet-name>
         <url-pattern>/addtable_result</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>TableDetailServlet</servlet-name>
+        <servlet-class>servlet.TableDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TableDetailServlet</servlet-name>
+        <url-pattern>/tabledetail</url-pattern>
+    </servlet-mapping>
 </web-app>
