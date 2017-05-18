@@ -107,24 +107,6 @@
                 console.log(text);
             });
         });
-        function loadXMLDoc() {
-            var xmlhttp;
-            if (window.XMLHttpRequest) {
-                //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-                xmlhttp = new XMLHttpRequest();
-            }
-            else {
-                // IE6, IE5 浏览器执行代码
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function () {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("add_detail").innerHTML = xmlhttp.responseText;
-                }
-                xmlhttp.open("POST", "/getFreeTable.php", true);
-                xmlhttp.send();
-            }
-        }
     </script>
     <style>
         body {
@@ -389,7 +371,7 @@
             </table>
         </div>
         <div id='add_booking_panel' class="addDiv">
-            <form method="post" action="/addbooking" onsubmit="return inputComplete()">
+            <form method="post" action="/addbooking" target="_blank"  onsubmit="return inputComplete()">
                 <h3 class="MyTitle2">预定时间(18:00-23:00)</h3>
                 <table style="margin: auto">
                     <tr>
@@ -400,10 +382,6 @@
                 </table>
                 <input class="button2 blue" type="submit" value="新增预约">
             </form>
-            <input type="button" onclick="loadXMLDoc()">
-        </div>
-        <div id="add_detail">
-
         </div>
         <div id="add_without_booking_panel" class="setCenter red setWidth" style="display: none">
             <form id="submitForm" method="post" action="/submit" onsubmit="return submitMyInfo()">
