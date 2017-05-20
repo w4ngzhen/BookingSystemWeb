@@ -11,6 +11,7 @@
 
 <%@ page import="entity.Booking" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.Calendar" %>
 <%
     int tno = (int) request.getAttribute("tno");
     int places = (int) request.getAttribute("places");
@@ -72,9 +73,116 @@
                 out.print("booking" + i + ".endTime = '" + relatedBookings.get(i).getEndTime() + "';");
                 out.print("booking" + i + ".cName = '" + relatedBookings.get(i).getcName() + "';");
                 out.print("booking" + i + ".cPhoneNumber = '" + relatedBookings.get(i).getcPhoneNumber() + "';");
+                out.print("booking" + i + ".status = '" + relatedBookings.get(i).getStatus() + "';");
                 out.print("relatedBookings[" + i + "]= booking" + i + ";");
             }
         %>
+        function getPoint(booking) {
+            var sh = booking.startTime.substring(11, 13);
+            var smin = booking.startTime.substring(14, 16);
+            var eh = booking.endTime.substring(11, 13);
+            var emin = booking.endTime.substring(14, 16);
+            var point = new Object();
+            point.startPos = (sh - startTimeSetting) * 60 + parseInt(smin);
+            point.endPos = (eh - startTimeSetting) * 60 + parseInt(emin);
+            return point;
+        }
+        function getLittleTime(time) {
+            return time.substring(11, 13) + " : " + time.substring(14, 16) + " : " + time.substring(17, 19);
+        }
+        function fillCanvas() {
+            var c = document.getElementById("timebar");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#99FF00";
+            ctx.fillRect(0, 0, 600, 20);
+            ctx.lineWidth = 1;
+            var points = new Array();
+            for (var i = 0; i < relatedBookings.length; i++) {
+                points[i] = getPoint(relatedBookings[i]);
+            }
+            for (var i = 0; i < points.length; i++) {
+                if (relatedBookings[i].status == "ing") {
+                    ctx.fillStyle = "#FF0000";
+                } else {
+                    ctx.fillStyle = "#FFCC00";
+                }
+                var sp = points[i].startPos * 2;
+                var ep = points[i].endPos * 2;
+                ctx.fillRect(sp, 0, ep - sp, 20);
+                ctx.strokeRect(sp, 0, ep - sp, 20);
+                ctx.lineWidth = 1;
+            }
+            function getMousePos(canvas, evt) {
+                var rect = canvas.getBoundingClientRect();
+                return {
+                    x: evt.clientX - rect.left,
+                    y: evt.clientY - rect.top
+                };
+            }
+
+            function getTheTimeSlot(xPos) {
+                for (var i = 0; i < points.length; i++) {
+                    if ((points[i].startPos * 2 < xPos) && (xPos < points[i].endPos * 2)) {
+                        return i;
+                    }
+                }
+                return -1;
+            }
+
+            c.addEventListener("mouseover", function (evt) {
+                var mousePos = getMousePos(c, evt);
+                var bookingIndex = getTheTimeSlot(mousePos.x);
+                if (bookingIndex == -1) {
+                    document.getElementsByName("showTimeInfo")[0].innerHTML = "时间段空闲";
+                } else {
+                    var content = "时间段: " + getLittleTime(relatedBookings[bookingIndex].startTime)
+                        + " 到 " + getLittleTime(relatedBookings[bookingIndex].endTime);
+                    document.getElementsByName("showTimeInfo")[0].innerHTML = content;
+                }
+            }, false);
+            c.addEventListener("mousemove", function (evt) {
+                var mousePos = getMousePos(c, evt);
+                var bookingIndex = getTheTimeSlot(mousePos.x);
+                if (bookingIndex == -1) {
+                    document.getElementsByName("showTimeInfo")[0].innerHTML = "时间段空闲";
+                } else {
+                    var content = "时间段: " + getLittleTime(relatedBookings[bookingIndex].startTime)
+                        + " 到 " + getLittleTime(relatedBookings[bookingIndex].endTime);
+                    document.getElementsByName("showTimeInfo")[0].innerHTML = content;
+                }
+            }, false);
+
+            c.addEventListener("mouseout", function () {
+                document.getElementsByName("showTimeInfo")[0].innerHTML = "鼠标移动到上方时间段显示具体时间";
+            }, false);
+
+        }
+        function setTimeNote() {
+            var c = document.getElementById("timeNote");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 20);
+            ctx.lineTo(600, 20);
+            ctx.stroke();
+            for (var i = 0; i < 10; i++) {
+                ctx.moveTo(i * 60, 20);
+                if (i % 2 == 0) {
+                    ctx.lineTo(i * 60, 10);
+                    ctx.fillText((i / 2 + 18) + ":00", i * 60, 10);
+                } else {
+                    ctx.lineTo(i * 60, 25);
+                    ctx.fillText(":30", i * 60, 35);
+                }
+                ctx.stroke();
+            }
+            ctx.moveTo(600, 20);
+            ctx.lineTo(600, 10);
+            ctx.stroke();
+            ctx.fillText("23:00", 565, 10)
+        }
+        window.onload = function () {
+            fillCanvas();
+            setTimeNote();
+        };
         function convertIntoTimestamp(time, status) {
             if (time != null) {
                 var year = time.substring(0, 4);
@@ -93,7 +201,13 @@
         function overlap() {
             var myst = convertIntoTimestamp(document.getElementsByName("startTime")[0].value, "start");
             var myet = convertIntoTimestamp(document.getElementsByName("endTime")[0].value, "end");
-            alert(myst + "到" + myet);
+            for (var i = 0; i < relatedBookings.length; i++) {
+                if (myst > relatedBookings[i].endTime || myet < relatedBookings[i].startTime) {
+                    continue;
+                } else {
+                    return true;
+                }
+            }
             return false;
         }
 
@@ -111,26 +225,53 @@
         function checkInfo() {
             if (!infoComplete()) {
                 alert("所填信息不够完整！");
-                 return false;
+                return false;
             } else if (overlap()) {
                 alert("所选时间与其他预定有重复");
                 return false;
             } else {
-                return false;
+                return true;
             }
-            return false;
         }
     </script>
 </head>
 <body>
-<div id="timeDiv"></div>
+<div id="timeDiv">
+    <%
+        Calendar now = Calendar.getInstance();
+        int year = now.get(Calendar.YEAR);
+        int month = now.get(Calendar.MONTH) + 1;
+        int day = now.get(Calendar.DAY_OF_MONTH);
+    %>
+    <p class="MyTitle">当前日期:<%= " " + year + " 年 " + month + " 月 " + day + "日"%>
+    </p>
+    <table class="setCenter">
+        <tr>
+            <td>
+                <canvas id="timeNote" width="600" height="40"></canvas>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <canvas id="timebar" width="600" height="20"
+                        style="border: solid black"></canvas>
+            </td>
+        </tr>
+        <tr>
+            <td name="showTimeInfo" style="border: solid black; height: 30px; text-align: center">
+                鼠标移动到上方时间段显示具体时间
+            </td>
+        </tr>
+    </table>
+</div>
 <div id="buttonDiv">
-    <form method="post" action="">
+    <form method="post" action="/checkout">
+        <%= "<input hidden name='checkouttable' value='onGoingTable_" + tno + "'>" %>
         <table>
             <tr>
                 <%
                     if ("正就餐".equals(currentStatus)) {
-                        out.print("<input type='submit' value='当前餐桌结账'>");
+                        out.print("<input type='submit' class='button2 red' value='当前就餐餐桌结账'>");
                     }
                 %>
             </tr>
@@ -159,9 +300,7 @@
             </tr>
             <tr>
                 <td><input type="text" name="cName"></td>
-                <td><input type='text' name="cPhoneNumber"
-                           onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)"
-                           onblur="this.v();"/>
+                <td><input type='text' name="cPhoneNumber">
                 </td>
                 <td><input type="radio" name="sex" value="male" checked>先生</td>
                 <td><input type="radio" name="sex" value="female">女士</td>

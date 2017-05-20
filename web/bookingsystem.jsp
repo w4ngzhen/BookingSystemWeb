@@ -446,7 +446,7 @@
             </table>
         </div>
         <div id='add_booking_panel' class="addDiv">
-            <form method="post" action="/addbooking" target="_blank" onsubmit="return inputComplete()">
+            <form method="post" action="/addbooking" onsubmit="return inputComplete()">
                 <h3 class="MyTitle2">预定时间(18:00-23:00)</h3>
                 <table style="margin: auto">
                     <tr>
@@ -604,7 +604,7 @@
                 </table>
             </form>
         </div>
-        <form id="table_detail_form" method="post" action="/tabledetail" target="_blank" hidden>
+        <form id="table_detail_form" method="post" action="/tabledetail" hidden>
             <input hidden type="text" value="" name="info">
         </form>
     </div>
