@@ -253,16 +253,32 @@
             margin: auto;
         }
 
+        div.onGoingDiv {
+            width: 600px;
+            border: black solid;
+            margin: auto;
+        }
+
+        div.buttonDiv {
+            width: 600px;
+            border: black solid;
+            margin: auto;
+        }
+
+        div.buttonDiv2 {
+            width: 600px;
+            border: black solid;
+            margin: auto;
+        }
+
         table.buttonTable {
             text-align: center;
-            border: solid red;
             margin: auto;
             width: 600px;
             height: 30px;
         }
 
         table.buttonTable td {
-            border: solid yellow;
             margin: auto;
             width: inherit;
             height: inherit;
@@ -278,7 +294,6 @@
             float: left;
             width: 600px;
             height: auto;
-            border: solid black;
         }
 
         .tableArea {
@@ -405,35 +420,37 @@
                 %>
             </table>
         </div>
-        <table class="buttonTable">
-            <tr>
-                <td>
-                    <form method="post" action="/transfer">
-                        <input class="button2 pink" name="transfer" type="submit" value="调换座位" disabled>
-                        <input name="transfertable" value="" hidden>
-                    </form>
-                </td>
-                <td>
-                    <form method="post" action="/record">
-                        <input class="button2 orange" name="record" type="submit" value="就餐" disabled>
-                        <input name="setRepastBooking" value="" hidden>
-                    </form>
-                </td>
-                <td>
-                    <form method="post" action="/checkout">
-                        <input class="button2 yellow" name="checkout" type="submit" value="结账" disabled>
-                        <input name="checkouttable" value="" hidden>
-                    </form>
-                </td>
-                <td>
-                    <form method="post" action="/cancel">
-                        <input class="button2 red" name="cancel" type="submit" value="取消订单" disabled>
-                        <input name="cancelbookingid" value="" hidden>
-                    </form>
-                </td>
-            </tr>
-        </table>
-        <div id="ButtonDiv2">
+        <div class="buttonDiv">
+            <table class="buttonTable">
+                <tr>
+                    <td>
+                        <form method="post" action="/transfer">
+                            <input class="button2 pink" name="transfer" type="submit" value="调换座位" disabled>
+                            <input name="transfertable" value="" hidden>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" action="/record">
+                            <input class="button2 orange" name="record" type="submit" value="就餐" disabled>
+                            <input name="setRepastBooking" value="" hidden>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" action="/checkout">
+                            <input class="button2 yellow" name="checkout" type="submit" value="结账" disabled>
+                            <input name="checkouttable" value="" hidden>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" action="/cancel">
+                            <input class="button2 red" name="cancel" type="submit" value="取消订单" disabled>
+                            <input name="cancelbookingid" value="" hidden>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="ButtonDiv2" class="buttonDiv2">
             <table style="width: 600px; text-align: center">
                 <tr>
                     <td style="text-align: center">
@@ -458,7 +475,7 @@
                 <input class="button2 blue" type="submit" value="新增预约">
             </form>
         </div>
-        <div id="add_without_booking_panel" class="setCenter red setWidth" style="display: none">
+        <div id="add_without_booking_panel" class="setCenter setWidth" style="display: none; border: solid black;">
             <form id="submitForm" method="post" action="/submit" onsubmit="return submitMyInfo()">
                 <%= "<input hidden name='startTime' value='" + startTime + "' readonly>"%>
                 <%= "<input hidden name='endTime' value='" + endTime + "' readonly>"%>
