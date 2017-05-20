@@ -7,13 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f34c08cf-2e8b-47f0-9a1f-808995741ab7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war/BookingSystemWeb_war.war" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war/BookingSystemWeb_war.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/bookingsystem.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/bookingsystem.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/classes/config/database_config.properties" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/classes/config/database_config.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/database_config.properties" afterPath="$PROJECT_DIR$/src/config/database_config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/config/database_config.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/database_config.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bookingsystem.jsp" afterPath="$PROJECT_DIR$/web/bookingsystem.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/table_detail.jsp" afterPath="$PROJECT_DIR$/web/table_detail.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,43 +32,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="table_detail.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/table_detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="267" column="41" lean-forward="false" selection-start-line="267" selection-start-column="41" selection-end-line="267" selection-end-column="41" />
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bookingsystem.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bookingsystem.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="94" column="63" lean-forward="false" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckoutServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/CheckoutServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database_config.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="database_config.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/config/database_config.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+              <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -149,9 +114,9 @@
         <option value="$PROJECT_DIR$/web/js/bookingsystem.js" />
         <option value="$PROJECT_DIR$/src/servlet/TableDetailServlet.java" />
         <option value="$PROJECT_DIR$/src/servlet/SubmitServlet.java" />
+        <option value="$PROJECT_DIR$/web/table_detail.jsp" />
         <option value="$PROJECT_DIR$/web/bookingsystem.jsp" />
         <option value="$PROJECT_DIR$/src/config/database_config.properties" />
-        <option value="$PROJECT_DIR$/web/table_detail.jsp" />
       </list>
     </option>
   </component>
@@ -976,7 +941,7 @@
       <workItem from="1495093021908" duration="306000" />
       <workItem from="1495093398780" duration="4782000" />
       <workItem from="1495103705928" duration="5143000" />
-      <workItem from="1495278957710" duration="5368000" />
+      <workItem from="1495278957710" duration="5992000" />
     </task>
     <task id="LOCAL-00001" summary="booking system">
       <created>1494893185900</created>
@@ -1013,11 +978,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495092109060</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="booking system">
+      <created>1495285176415</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1495285176415</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150559000" />
+    <option name="totallyTimeSpent" value="151183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1367,6 +1339,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1402,19 +1375,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bookingsystem.jsp">
+    <entry file="file://$PROJECT_DIR$/web/table_detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="94" column="63" lean-forward="false" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="63" />
-          <folding />
+        <state relative-caret-position="265">
+          <caret line="161" column="21" lean-forward="false" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/database_config.properties">
+    <entry file="file://$PROJECT_DIR$/web/bookingsystem.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="477" column="113" lean-forward="false" selection-start-line="477" selection-start-column="113" selection-end-line="477" selection-end-column="113" />
+          <folding>
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1426,13 +1403,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/table_detail.jsp">
+    <entry file="file://$PROJECT_DIR$/src/config/database_config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="267" column="41" lean-forward="false" selection-start-line="267" selection-start-column="41" selection-end-line="267" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
