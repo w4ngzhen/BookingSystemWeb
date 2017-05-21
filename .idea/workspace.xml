@@ -6,13 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f34c08cf-2e8b-47f0-9a1f-808995741ab7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/servlet/SetRepastServlet.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/servlet/SetRepastServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/database_config.properties" afterPath="$PROJECT_DIR$/src/config/database_config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/SetRepastServlet.java" afterPath="$PROJECT_DIR$/src/servlet/SetRepastServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/config/database_config.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/database_config.properties" />
-    </list>
+    <list default="true" id="f34c08cf-2e8b-47f0-9a1f-808995741ab7" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,7 +40,7 @@
       <file leaf-file-name="SetRepastServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/servlet/SetRepastServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="165">
               <caret line="18" column="91" lean-forward="false" selection-start-line="18" selection-start-column="91" selection-end-line="18" selection-end-column="91" />
               <folding />
             </state>
@@ -973,7 +967,7 @@
       <workItem from="1495103705928" duration="5143000" />
       <workItem from="1495278957710" duration="6007000" />
       <workItem from="1495343616381" duration="739000" />
-      <workItem from="1495375828003" duration="782000" />
+      <workItem from="1495375828003" duration="944000" />
     </task>
     <task id="LOCAL-00001" summary="booking system">
       <created>1494893185900</created>
@@ -1028,7 +1022,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152719000" />
+    <option name="totallyTimeSpent" value="152881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1053,7 +1047,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25852272" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25852272" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.273021" sideWeight="0.45402297" order="0" side_tool="false" content_ui="combo" />
@@ -1422,7 +1416,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/SetRepastServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="165">
           <caret line="18" column="91" lean-forward="false" selection-start-line="18" selection-start-column="91" selection-end-line="18" selection-end-column="91" />
           <folding />
         </state>
