@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2017-05-15 16:43:10
+-- Generation Time: 2017-05-21 22:40:57
 -- 服务器版本： 5.6.26
 -- PHP Version: 5.5.29
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `bookingrecord` (
 
 CREATE TABLE IF NOT EXISTS `bsbooking` (
   `bid` int(10) NOT NULL,
-  `startTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `startTime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `endTime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `tno` int(10) NOT NULL,
   `cName` varchar(20) COLLATE utf8_unicode_ci NOT NULL,

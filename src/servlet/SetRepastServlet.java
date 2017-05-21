@@ -15,6 +15,7 @@ import java.io.IOException;
 public class SetRepastServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         int bid = Integer.parseInt(request.getParameter("setRepastBooking").substring(11));
         request.setAttribute("content", "添加就餐");
         if (InfoSetter.setRepastByBid(bid)) {
