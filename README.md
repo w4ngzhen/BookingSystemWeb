@@ -10,6 +10,7 @@
 ### 功能介绍
 ##### 主要功能：
 - 添加预定：通过时间并查询数据库筛选所选时间可用的桌子添加预订信息
+- 2017.5.21更新：可查看每一个桌子的时间条详情进行可选时间段预定
 - 添加临时顾客：针对临时进店的未预约客人，我们可以在能够进行就餐的时间段添加就餐
 - 调换座位：对于所有的预约均可以调换可用座位
 - 就餐：到店的已预约点击试用该功能进入就餐环节
@@ -52,6 +53,6 @@ IntelliJ IDEA  +  MySQL
 <img src="https://github.com/meesdd/BookingSystemWeb/blob/master/description_images/4.png" width="50%" height="50%"/>
 #### 餐桌管理界面：
 <img src="https://github.com/meesdd/BookingSystemWeb/blob/master/description_images/5.png" width="50%" height="50%"/>
-
-
+#### 新增的更具桌子详情预定
+<img src="https://github.com/meesdd/BookingSystemWeb/blob/master/description_images/6.png" width="50%" height="50%"/>
 
