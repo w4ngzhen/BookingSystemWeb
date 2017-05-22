@@ -23,7 +23,7 @@
 </head>
 <body>
 <div class="setCenter red setWidth">
-    <form id="submitForm" method="post" action="/submit" onsubmit="return submitMyInfo()">
+    <form id="submitForm" method="post" action="submit" onsubmit="return submitMyInfo()">
         <p class="MyTitle">预定时间段</p>
         <%= "<input type='text' name='startTime' value='" + startTime + "' readonly>"%>
         <label>到</label>

@@ -265,7 +265,7 @@
     </table>
 </div>
 <div id="buttonDiv">
-    <form method="post" action="/checkout">
+    <form method="post" action="checkout">
         <%= "<input hidden name='checkouttable' value='onGoingTable_" + tno + "'>" %>
         <table>
             <tr>
@@ -279,7 +279,7 @@
     </form>
 </div>
 <div id="add_booking">
-    <form method="post" action="/submit" onsubmit="return checkInfo()">
+    <form method="post" action="submit" onsubmit="return checkInfo()">
         <p class="MyTitle3">预约时间<br/>（请根据上方时间轴选择合适可用的时间）</p>
         <table class="setCenter">
             <tr>

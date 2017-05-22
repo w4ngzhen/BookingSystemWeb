@@ -15,7 +15,7 @@
 <script>
     window.onload = function () {
         alert("抱歉，当前已经没有可用的桌子了！");
-        window.location.href = "/bookingsystem";
+        window.location.href = "bookingsystem";
     };
 </script>
 </body>

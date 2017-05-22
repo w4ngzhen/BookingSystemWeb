@@ -56,7 +56,7 @@
     </script>
 </head>
 <body>
-<form method="post" action="/addtable_result" onsubmit="return onAddMyTable()">
+<form method="post" action="addtable_result" onsubmit="return onAddMyTable()">
     <p class="MyTitle">新增桌子</p>
     <input hidden type="text" value="" name="tno">
     <input hidden type="text" value="" name="capa">

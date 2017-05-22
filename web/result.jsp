@@ -19,7 +19,7 @@
             var content = document.getElementsByName("content")[0].value;
             var result = document.getElementsByName("result")[0].value;
             alert(content + ": " + result);
-            window.location.href = "/bookingsystem";
+            window.location.href = "bookingsystem";
         };
     </script>
 </head>
