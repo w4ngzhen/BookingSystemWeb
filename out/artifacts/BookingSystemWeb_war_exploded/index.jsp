@@ -18,7 +18,7 @@
         <h3 class="press">欢迎进入餐厅预订系统</h3>
     </div>
     <div class="buttonDiv">
-        <form method="post" action="/bookingsystem">
+        <form method="post" action="bookingsystem">
             <input class="button" type="submit" value="进入">
         </form>
     </div>

@@ -424,25 +424,25 @@
             <table class="buttonTable">
                 <tr>
                     <td>
-                        <form method="post" action="/transfer">
+                        <form method="post" action="transfer">
                             <input class="button2 pink" name="transfer" type="submit" value="调换座位" disabled>
                             <input name="transfertable" value="" hidden>
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/record">
+                        <form method="post" action="record">
                             <input class="button2 orange" name="record" type="submit" value="就餐" disabled>
                             <input name="setRepastBooking" value="" hidden>
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/checkout">
+                        <form method="post" action="checkout">
                             <input class="button2 yellow" name="checkout" type="submit" value="结账" disabled>
                             <input name="checkouttable" value="" hidden>
                         </form>
                     </td>
                     <td>
-                        <form method="post" action="/cancel">
+                        <form method="post" action="cancel">
                             <input class="button2 red" name="cancel" type="submit" value="取消订单" disabled>
                             <input name="cancelbookingid" value="" hidden>
                         </form>
@@ -463,7 +463,7 @@
             </table>
         </div>
         <div id='add_booking_panel' class="addDiv">
-            <form method="post" action="/addbooking" onsubmit="return inputComplete()">
+            <form method="post" action="addbooking" onsubmit="return inputComplete()">
                 <h3 class="MyTitle2">预定时间(18:00-23:00)</h3>
                 <table style="margin: auto">
                     <tr>
@@ -476,7 +476,7 @@
             </form>
         </div>
         <div id="add_without_booking_panel" class="setCenter setWidth" style="display: none; border: solid black;">
-            <form id="submitForm" method="post" action="/submit" onsubmit="return submitMyInfo()">
+            <form id="submitForm" method="post" action="submit" onsubmit="return submitMyInfo()">
                 <%= "<input hidden name='startTime' value='" + startTime + "' readonly>"%>
                 <%= "<input hidden name='endTime' value='" + endTime + "' readonly>"%>
                 <p class="MyTitle">桌号选择</p>
@@ -564,7 +564,7 @@
             }
         %>
         <div id="theDeleteBox" class="deleteTableDiv">
-            <form method="post" action="/deletetable">
+            <form method="post" action="deletetable">
                 <p class="MyTitle">当前可移除的桌子</p>
                 <select name="tableSelect">
                     <%
@@ -589,7 +589,7 @@
             </form>
         </div>
         <div id="theAddBox" class="addTableDiv">
-            <form method="post" action="/addtable_result" onsubmit="return addMyNewTable()">
+            <form method="post" action="addtable_result" onsubmit="return addMyNewTable()">
                 <p class="MyTitle3">新增桌子</p>
                 <input hidden type="text" value="" name="tno">
                 <input hidden type="text" value="" name="capa">
@@ -621,7 +621,7 @@
                 </table>
             </form>
         </div>
-        <form id="table_detail_form" method="post" action="/tabledetail" hidden>
+        <form id="table_detail_form" method="post" action="tabledetail" hidden>
             <input hidden type="text" value="" name="info">
         </form>
     </div>
