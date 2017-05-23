@@ -7,19 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f34c08cf-2e8b-47f0-9a1f-808995741ab7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/servlet/DeleteTableServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war/BookingSystemWeb_war.war" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war/BookingSystemWeb_war.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/classes/DAO/InfoSetter.class" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/classes/DAO/InfoSetter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/DAO/InfoSetter.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/DAO/InfoSetter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/classes/config/database_config.properties" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/classes/config/database_config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/bookingsystem.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war_exploded/bookingsystem.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/InfoSetter.java" afterPath="$PROJECT_DIR$/src/DAO/InfoSetter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/database_config.properties" afterPath="$PROJECT_DIR$/src/config/database_config.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/config/database_config.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/database_config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bookingsystem.jsp" afterPath="$PROJECT_DIR$/web/bookingsystem.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,6 +31,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="database_config.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/config/database_config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DeleteTableServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlet/DeleteTableServlet.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InfoSetter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InfoSetter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/InfoSetter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="-212">
               <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding>
                 <marker date="1495530316000" expanded="true" signature="322:355" ph="DELETE FROM " />
@@ -157,11 +157,11 @@
         <option value="$PROJECT_DIR$/web/add_table.jsp" />
         <option value="$PROJECT_DIR$/web/add_booking.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/DeleteServlet.java" />
-        <option value="$PROJECT_DIR$/src/config/database_config.properties" />
         <option value="$PROJECT_DIR$/web/bookingsystem.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/servlet/DeleteTableServlet.java" />
         <option value="$PROJECT_DIR$/src/DAO/InfoSetter.java" />
+        <option value="$PROJECT_DIR$/src/config/database_config.properties" />
       </list>
     </option>
   </component>
@@ -992,7 +992,7 @@
       <workItem from="1495450116195" duration="814000" />
       <workItem from="1495451772838" duration="29000" />
       <workItem from="1495528764327" duration="65000" />
-      <workItem from="1495528887142" duration="1338000" />
+      <workItem from="1495528887142" duration="1627000" />
     </task>
     <task id="LOCAL-00001" summary="booking system">
       <created>1494893185900</created>
@@ -1050,15 +1050,21 @@
       <option name="project" value="LOCAL" />
       <updated>1495450991634</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="modifiy url setting">
+      <created>1495530380058</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1495530380058</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155127000" />
+    <option name="totallyTimeSpent" value="155416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1079,7 +1085,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25852272" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25852272" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28836834" sideWeight="0.44886363" order="0" side_tool="false" content_ui="combo" />
@@ -1360,14 +1366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/database_config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/bookingsystem.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1444,7 +1442,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/InfoSetter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="-212">
           <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding>
             <marker date="1495530316000" expanded="true" signature="322:355" ph="DELETE FROM " />
@@ -1457,6 +1455,14 @@
             <marker date="1495530316000" expanded="true" signature="6444:6486" ph="UPDATE bsboo... " />
             <marker date="1495530316000" expanded="true" signature="7166:7351" ph="INSERT INTO bsbooking... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/database_config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
