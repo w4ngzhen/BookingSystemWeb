@@ -12,6 +12,28 @@ import java.sql.SQLException;
  * Created by mee on 2017/4/25.
  */
 public class InfoSetter {
+    public static boolean deleteTableByTno(int tno) {
+        String sql = "DELETE FROM bstable WHERE tno = ?";
+        DatabaseConnection dbc = new DatabaseConnection();
+        PreparedStatement ps = null;
+        try {
+            ps = dbc.getConnection().prepareStatement(sql);
+            ps.setInt(1, tno);
+            if (ps.executeUpdate() > 0)
+                return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (ps != null)
+                    ps.close();
+                dbc.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
     public static boolean addTable(Table table) {
         String sql = "INSERT INTO bstable (tno, places) VALUES (?, ?)";
         DatabaseConnection dbc = new DatabaseConnection();

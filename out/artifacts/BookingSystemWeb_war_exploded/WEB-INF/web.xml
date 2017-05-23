@@ -90,4 +90,12 @@
         <servlet-name>TableDetailServlet</servlet-name>
         <url-pattern>/tabledetail</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteTableServlet</servlet-name>
+        <servlet-class>servlet.DeleteTableServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteTableServlet</servlet-name>
+        <url-pattern>/deletetable</url-pattern>
+    </servlet-mapping>
 </web-app>

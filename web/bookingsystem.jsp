@@ -519,7 +519,7 @@
                 </td>
                 <td></td>
                 <td style="text-align: center">
-                    <input style="margin: auto" r id="deleteTheTable" class="button2 red" type="button" value="移除桌子">
+                    <input style="margin: auto" id="deleteTheTable" class="button2 red" type="button" value="移除桌子">
                 </td>
             </tr>
         </table>
