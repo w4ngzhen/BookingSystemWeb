@@ -1,0 +1,363 @@
+@mixin lightfont{
+    font-size:12px;
+    color:rgba(0,0,0,0.7);
+}
+@mixin bdroud{
+    border-radius: 5px ;
+    padding: 2px 5px;
+}
+@mixin lightbox{
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+.smoothlip{
+    @include bdroud;
+    font-weight: 200;
+    font-size: 1em;
+}
+.rYcenter>*{
+    display: block;
+}
+.rYcenter{
+    display: flex;
+//  text-align: center;
+    align-items: center;
+//  justify-content: center;
+    flex-direction: row;
+}
+$lightgreen: #dffbcb;
+$lightblue: #b7e1ff;
+$lightred: #ffe1ca;
+
+html{
+    font-family: "microsoft yahei";
+}
+section{
+    margin: 80px auto;
+    width: 800px;
+}
+//div{
+//  border: 1px dashed gray;
+//}
+input{
+    &:focus{
+        outline: none;
+        border:1px solid #48c8e3;
+    }
+    padding:0 10px;
+    border:1px solid gray;
+    border-radius:5px ;
+}
+.spanbt{
+    cursor: pointer;
+}
+.inputwrapper{
+    position: relative;
+    z-index: 1;
+    label{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        right: 10px;
+        top: -30px;
+        transition: all .5s;
+        transform: skewX(-45deg) scale(0.8,0.5) translate(24px,18px);
+        border: 1px solid #e0e0e0;
+//      box-shadow: 0 0 4px rgba(0,0,0,0.3);
+        .closebt{
+            position: relative;
+            top: 2px;
+            border-radius: 100%;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            display: inline-block;
+            transition :background-color .3s;
+            span{
+                position: relative;
+                user-select: none;
+                top: -3px;
+            }
+            &:hover{
+                background: #aaa;
+            }
+        }
+    }
+}
+.item-tags{
+    @include lightfont;
+    background: #eee;
+    border-radius: 5px ;
+    border: 1px solid #eee;
+    padding: 2px 5px;
+    &.ls{
+        background: $lightgreen;
+    }
+    &.xs{
+        background: $lightblue;
+    }
+}
+.item-shelf{
+    position: relative;
+    $width:500px;
+    $topheight:30px;
+    width: $width;
+    height: $topheight + 100px + 2px;
+    margin :10px 0;
+    >div{
+        position: absolute;
+        width: $width/2-20px;
+        margin: 0 10px;
+        height: 100px;
+        display: inline-block;
+    }
+    .top-message{
+        width: 100%;
+        margin: 0;
+        height:$topheight;
+    }
+    .shel-message{
+        left: 0;
+        top:$topheight;
+        border: 1px solid #E0E0E0;
+        @include bdroud;
+//      @include lightbox;
+        ul{
+            margin: 5px;
+            padding-left: 20px ;
+//          list-style: none;
+            @include lightfont;
+        }
+    }
+    .quick-list{
+        top:$topheight;
+        left: $width/2;
+        border: 1px solid #E0E0E0;
+        @include bdroud;
+//      @include lightbox;
+    }
+}
+.spanloading{
+    display: inline-block;
+    height: 20px;
+    width: 24px;
+    position: relative;
+    .bar{
+        display: inline-block;
+        position: absolute;
+        top:0;
+        width: 4px;
+        height: 20px;
+        background: #ccc;
+        margin: 0 2px;
+        animation: magic .8s infinite ease;
+        &.ok{
+            animation : turntocircle .5s forwards;
+        }
+    }
+    @for $i from 1 through 3{
+        .bar:nth-child(#{$i}) {
+            animation-delay: $i * 0.15s;
+            left: $i * 7px;
+        }
+    }
+}
+@keyframes turntocircle {
+    50%{
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        left: 9px;
+    }
+    100%{
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        left: 9px;
+        opacity: 0;
+    }
+}
+@keyframes magic {
+    50%{
+//      filter: hue-rotate(0deg) invert(100%);
+        transform: scaleY(0.5);
+        opacity: 0.5;
+    }
+    100%{
+//      filter: hue-rotate(90deg) invert(0%);
+        transform: scale(1,1);
+    }
+}
+.supersearch{
+    width: 8em;
+    height: 30px;
+}
+.tagbook{
+    $tagheight:30px;
+    $containerheight:400px;
+    $containerwidth:500px;
+    $bgcolor:white;
+    padding: 0;
+    width: $containerwidth + 2px;
+    height: $containerheight+$tagheight;
+    margin: 0 auto;
+    .container{
+        position: relative;
+        top: $tagheight+1px;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        width: $containerwidth;
+        height: $containerheight;
+        display: block;
+        border: 1px solid black;
+        background: $bgcolor;
+    }
+    .tagli{
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        border: 1px solid lightgray;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        display: block;
+        float: left;
+        width: 50px;
+        height: $tagheight;
+        border-bottom: 1px solid rgba(0,0,0,1);
+        transition: background-color .3s linear;
+        background: #f2f2f2;
+        &:hover{
+            background: $bgcolor;
+        }
+    }
+    .active{
+        height: $tagheight;
+        border: 1px solid black;
+        border-bottom: 1px solid $bgcolor;
+        background: $bgcolor;
+        &:hover{
+           background: $bgcolor;
+        }
+    }
+}
+.titletag{
+    @extend .tagbook;
+    height: 40px;
+    margin: 30px 20px;
+    .container{
+        height: 0px;
+        border-radius: none;
+        border-bottom: 1px solid rgba(0,0,0,0);
+        transform: scale(1.1);
+    }
+}
+.quick-bt{
+    display: block;
+    border-radius: 5px;
+    background: #f2f2f2;
+    border: 1px solid rgba(0,0,0,0);
+    transition: all .2s;
+    margin: 10px;
+    height:30px;
+    padding:5px 10px;
+    font-size:12px;
+    cursor:pointer;
+    &:active{
+        background: #e0e0e0;
+    }
+    &:hover{
+        border: 1px solid #E0E0E0;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+.item-head{
+    width:100%;
+    height: 80px;
+    input{
+        width: 200px;
+        height: 30px;
+    }
+}
+.inputlabel{
+    @extend .smoothlip;
+    background: #eee;
+}
+.item-search{
+    height:auto;
+    width:auto;
+    margin: 4px 0;
+    @include bdroud;
+    @extend .rYcenter;
+    .spanbt{
+        position: relative;
+        width: 3em;
+        height:1em;
+        text-align: center;
+        top: -3px;
+        margin: 4px;
+    }
+    input{
+        @extend .supersearch;
+        margin: 0 5px;
+        &:focus{
+            & + label{
+                opacity: 1;
+                transform: skewX(0) scale(1,1) translate(0,0);
+            }
+        }
+    }
+    .spanloading{
+        position: relative;
+        left: 6px;
+        width: 40px;
+    }
+}
+.table-message{
+    width: 500px;
+    @include lightfont;
+    p{
+        margin-bottom: 4px;
+    }
+}
+.item-table{
+    $tablehead:#eee;
+    $hovercolor:#ecf6fd;
+    $borderline:#e0e0e0;
+    border-radius: 8px;
+    width: 600px;
+    font-size: 15px;
+    overflow: hidden;
+    border:1px solid $tablehead;
+    box-shadow: 1px 1px 8px -1px #eee;
+    table{
+        width:100%;
+        border-collapse: collapse;
+        border: none;
+    }
+    thead th{
+        font-weight: 500;
+        background:$tablehead;
+        border-right:1px solid $borderline;
+        color: rgba(0,0,0,1);
+    }
+    tbody td{
+        color:rgba(0,0,0,0.7);
+    }
+    th , td {
+        padding: 0 10px;
+        height: 40px;
+        vertical-align: middle;
+        border-right:1px solid $borderline;
+        border-bottom:1px solid $borderline;
+    }
+    link{
+        color:$hovercolor;
+    }
+    tbody tr {
+        transition: all .3s;
+    }
+    tbody tr:hover{
+        background: $hovercolor;
+    }
+}

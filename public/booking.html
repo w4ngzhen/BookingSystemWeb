@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>bookingTable</title>
+		<script src="vue.js"></script>
+		<!-- 引入elementUI样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui@1.3.3/lib/theme-default/index.css">
+		<!-- 引入elementUI组件库 -->
+		<script src="https://unpkg.com/element-ui@1.3.3/lib/index.js"></script>
+		<script src="jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="component.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/my.css" />
+		<link rel="stylesheet" href="css/booking.css" />
+		<style type="text/css">
+			.selected{
+				background: #efc;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <button id="ttttt">ceshi</button> -->
+
+		<!-- datepicker -->
+		<div id="datepicker">
+			<template>
+			  <div class="block">
+			    <span class="demonstration">日期:</span>
+			    <el-date-picker v-model="date" type="date" placeholder="选择日期" :picker-options="pickerOptions0">
+			    </el-date-picker>
+			  </div>
+			</template>
+		</div>
+
+		<div class="wrap">
+		<div class="item-table bookingtable" id = "bktable">
+			<table cellpadding="0">
+				<thead>
+					<tr>
+						<th>桌号</th>
+						<!--th>span{$:00}*20-->
+						<th class="timelist"><div>6</div><div class="half">:30</div><div>7</div><div class="half">:30</div><div>8</div><div class="half">:30</div><div>9</div><div class="half">:30</div><div>10</div><div class="half">:30</div><div>11</div><div class="half">:30</div><div>12</div><div class="half">:30</div><div>13</div><div class="half">:30</div><div>14</div><div class="half">:30</div><div>15</div><div class="half">:30</div><div>16</div><div class="half">:30</div><div>17</div><div class="half">:30</div><div>18</div><div class="half">:30</div><div>19</div><div class="half">:30</div><div>20</div></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="(v,k) in desk">
+						<td>{{ k }}</td>
+						<td class= "barlist">
+							<div 
+								is="timebar"
+								v-if = "x.arg.show"
+								v-for="(x,index) in v" 
+								v-bind:title="!!x.user.name"
+								v-bind:style="getStyle(x)"
+								v-bind:select="x.arg.select"
+								v-on:mouseover="x.arg.hover = 1"
+								v-on:mouseout="x.arg.hover = 0"
+								v-on:remove="cancel(x,k)"
+								v-on:click = "clickOnce(x)"
+							>
+							</div>
+							<div v-bind:data-deskid="k" class="selectWrap"><div class ="select-bar" v-for="i in 30" :data-num="i">&nbsp;</div></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+		<div class ="viewer">
+			<div id="itemMes" class = "container" >
+				<h2>查看详细信息</h2>
+				<div class="item-table messageshow-table">
+					<table cellpadding="0">
+						<tbody>
+							<tr>
+								<td>桌号</td>
+								<td>{{ tableId }}</td>
+							</tr>
+							<tr>
+								<td>时间</td>
+								<td>{{ this.getTime() }}</td>
+							</tr>
+							<tr v-for="(item , key) in items">
+								<td>{{ item.text }}</td>
+								<td><input type="text" v-model="user[key]"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<button class="btn" v-on:click="click">提交</button>
+			</div>
+			<div class="bookinglist" id = "bookingResult">
+				<h3>预约一览: <button v-on:click="comfirmResult" >确定</button></h3>
+				<div  v-for=" (desk,deskIndex) in result" v-if="desk.length > 0">
+					<h4>桌号:{{ deskIndex }}</h4>
+					<div class="item-table messageshow-table">
+						<table cellpadding=0>
+							<thead>
+								<tr>
+									<th>姓名</th><th>时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								<template v-for="(onep,index) in desk" v-if="onep.arg.show">
+									<tr>
+										<td>{{ getName(onep) }}</td><td>{{　getTime(onep)　}}</td>
+									</tr>
+								</template>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="itemview"></div>
+		<div class="background" style="display:none"></div>
+		<div class="container login" id="form" style="display:none">
+			<form action="/" method="post" class = "form">
+			<h2>{{ message }}</h2>
+				<template v-for="(item,key) in items">
+					<label :for="key">{{ item.text }}</label><br /><input v-model="item.value" class="input" :id="key" :name="key" type="item.text" :placeholder="key"><br />
+				</template>
+				<button v-on:click="click" class="btn">提交</button>
+			</form>
+		</div>
+
+		<script src= "VueRender.js"></script>
+		<script src = "booking.js"> </script> 
+	</body>
+</html>
