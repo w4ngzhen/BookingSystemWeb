@@ -1,6 +1,4 @@
 ## 基于JavaWeb的餐厅预订系统
-本人博客：[znote.wang](http://znote.wang)，欢迎大家访问！
-
 ## 项目介绍
 - 本餐厅预订系统，是本人的在校自学java servlet相关所做的一个实践。
 - 做得很粗糙，因为才学习java web，所以在代码中有很多地方的都没有达到规范，有点生搬硬凑之嫌疑。
@@ -43,15 +41,18 @@ IntelliJ IDEA  +  MySQL
 
 ### 项目功能截图
 #### 欢迎页：
-<img src="https://github.com/meesdd/BookingSystemWeb/blob/master/description_images/1.png" width="50%" height="50%"/>
+<img src="https://cdn.jsdelivr.net/gh/w4ngzhen/BookingSystemWeb/description_images/1.png" width="50%" height="50%"/>
+
 #### 主页面：
-<img src="https://github.com/meesdd/BookingSystemWeb/blob/master/description_images/2.png" width="50%" height="50%"/>
+<img src="https://cdn.jsdelivr.net/gh/w4ngzhen/BookingSystemWeb/description_images/2.png" width="50%" height="50%"/>
 #### 预定筛选、临时就餐界面：
-<img src="https://github.com/meesdd/BookingSystemWeb/blob/master/description_images/3.png" width="50%" height="50%"/>
+<img src="https://cdn.jsdelivr.net/gh/w4ngzhen/BookingSystemWeb/description_images/3.png" width="50%" height="50%"/>
 #### 预约界面：
-<img src="https://github.com/meesdd/BookingSystemWeb/blob/master/description_images/4.png" width="50%" height="50%"/>
+<img src="https://cdn.jsdelivr.net/gh/w4ngzhen/BookingSystemWeb/description_images/4.png" width="50%" height="50%"/>
+
 #### 餐桌管理界面：
-<img src="https://github.com/meesdd/BookingSystemWeb/blob/master/description_images/5.png" width="50%" height="50%"/>
+<img src="https://cdn.jsdelivr.net/gh/w4ngzhen/BookingSystemWeb/description_images/5.png" width="50%" height="50%"/>
+
 #### 新增的更具桌子详情预定
-<img src="https://github.com/meesdd/BookingSystemWeb/blob/master/description_images/6.png" width="50%" height="50%"/>
+<img src="https://cdn.jsdelivr.net/gh/w4ngzhen/BookingSystemWeb/description_images/6.png" width="50%" height="50%"/>
 
