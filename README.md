@@ -35,7 +35,7 @@ IntelliJ IDEA  +  MySQL
 
 ### 使用方法
 
-1. git clone 'https://github.com/meesdd/BookingSystemWeb.git'
+1. git clone 'https://github.com/w4ngzhen/BookingSystemWeb.git'
 2. 使用IntelliJ IDEA导入打开
 3. 部署Tomcat并启动
 
