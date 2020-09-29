@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="BookingSystemWeb:war">
-    <output-path>$PROJECT_DIR$/out/artifacts/BookingSystemWeb_war</output-path>
-    <root id="archive" name="BookingSystemWeb_war.war">
-      <element id="artifact" artifact-name="BookingSystemWeb:war exploded" />
-    </root>
-  </artifact>
-</component>
